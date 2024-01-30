@@ -1,38 +1,53 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Condensed:wght@300&display=swap');
+*{
+    font-family: 'Inter', sans-serif;
+    /* font-family: 'Roboto Condensed', sans-serif; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.parent{
+    background-color: #F6F6F3;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#srch:focus + fieldset{
+    border: 1px solid rgba(255, 165, 0,0.8);
+    /* background-color: black; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* #srchPar{
+    border: "1px solid gray";
+} */
+
+.menuItem{
+    transition: all 0.3s ease;
+    cursor: pointer;
+    height:2.5rem;
+    margin-top:0.1rem;
+    padding-left:10px;
+    border-radius: 20px;
+    line-height: 2.5rem;
+    font-weight: 200;
+    font-size: 14px;
+    letter-spacing: 0.1px;
+    box-sizing: border-box;
 }
 
-.App-link {
-  color: #61dafb;
+.menuItem:hover{
+    background-color: rgba(255, 165, 0,0.1);
+}
+.menuItem:hover > div > svg > path{
+    color: rgba(255, 165, 0,1);
+    stroke :rgba(255, 165, 0,1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.cta{
+    cursor: pointer;
+}
+.ctaIcon{
+    transition: all 0.3s ease;
+    display: inline-block;
+    transform: translateX(0px);
+}
+.cta:hover > .ctaIcon{
+    transform: translateX(2px);
 }
